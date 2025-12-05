@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Truck } from "lucide-react"
 import Link from "next/link"
+import { GetStartedDialog } from "./get-started-dialog"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -77,8 +78,11 @@ export function Navigation() {
                   {item.label}
                 </Link>
               ))}
+                          <GetStartedDialog>
+
               <Button className="bg-primary hover:bg-primary/90 w-full mt-2">Get Quote</Button>
-            </div>
+
+                          </GetStartedDialog>            </div>
           </div>
         )}
       </div>
